@@ -1,6 +1,6 @@
 # Minhas configurações do editor de texto Neovim 
 
-Repositório criado com objetivo de salvar minhas configurações do editor de texto [Neovim](https://github.com/neovim/neovim).
+Minhas configurações do editor de texto [Neovim](https://github.com/neovim/neovim).
 
 ## Configuração
 

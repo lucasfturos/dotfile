@@ -19,5 +19,3 @@ require "user.indentline"
 require "user.alpha" -- Alterei o logo do Dashboard e comentei os créditos do autor
 require "user.whichkey"
 require "user.autocommands"
--- Minhas modificações
-require "user.increname"
