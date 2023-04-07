@@ -11,9 +11,10 @@ alias projetoweb='cd /home/LucasTuros/Documentos/Programacao/ProjetosWEB'
 alias projetogithub='cd /home/LucasTuros/Documentos/Programacao/Github'
 # alias command git
 alias gitlogs='git log --graph --decorate --all --oneline | head -10'
+alias gitrenamerepo='git remote set-url origin'
 # some more ls aliases
 alias ll='ls -l'
-alias la='ls -A'
+alias la='ls -A -l'
 # Remove Directory
 alias rmd='rm -rf'
 # Remove Directory as root
