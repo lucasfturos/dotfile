@@ -4,6 +4,7 @@ require "user.plugins" -- Adicionei os plugins novos
 require "user.colorscheme"
 require "user.cmp"
 require "user.lsp"
+require "user.complete"
 require "user.telescope"
 require "user.gitsigns"
 require "user.treesitter"

@@ -14,14 +14,14 @@ null_ls.setup({
 	debug = false,
   autostart = true,
 	sources = {
+    null_ls.builtins.code_actions.gitsigns,
 		formatting.prettier.with({ extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } }),
 		formatting.black.with({ extra_args = { "--fast" } }),
     diagnostics.eslint,
     formatting.stylua,
     completion.spell,
     formatting.rustfmt,
-    formatting.clang_format,
-    diagnostics.clang_check_11,
+    formatting.clang_check,
     diagnostics.checkmake,
     diagnostics.pylint,
     -- diagnostics.flake8
