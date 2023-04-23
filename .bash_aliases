@@ -21,3 +21,5 @@ alias rmd='rm -rf'
 alias srmd='sudo rm -rf'
 # Copy Directory
 alias cpd='cp -r'	
+# cat
+alias cat='batcat'
