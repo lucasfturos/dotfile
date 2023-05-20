@@ -26,6 +26,49 @@ require'lspconfig'.clangd.setup{
     	semanticHighlighting = true,
     }
 }
+require'lspconfig'.zls.setup{
+  cmd = { "zls" },
+  filetype = { "zig", "zir" },
+  single_file_support =true, 
+}
+
+require'lspconfig'.eslint.setup{
+  settings = {
+    codeAction = {
+      disableRuleComment = {
+        enable = true,
+        location = "separateLine"
+      },
+      showDocumentation = {
+        enable = true
+      }
+    },
+    codeActionOnSave = {
+      enable = false,
+      mode = "all"
+    },
+    experimental = {
+      useFlatConfig = false
+    },
+    format = true,
+    formatCommand = {"black"},
+    nodePath = "",
+    onIgnoredFiles = "off",
+    packageManager = "npm",
+    problems = {
+      shortenToSingleLine = false
+    },
+    quiet = false,
+    rulesCustomizations = {},
+    run = "onType",
+    useESLintClass = false,
+    validate = "on",
+    workingDirectory = {
+      mode = "location"
+    }
+  }
+}
+
 require "lsp_signature".setup()
 vim.o.completeopt = 'menuone,noselect'
 
