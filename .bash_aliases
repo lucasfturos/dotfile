@@ -16,7 +16,7 @@ alias gitlogs='git log --graph --decorate --all --oneline | head -10'
 alias gitrenamerepo='git remote set-url origin'
 alias gitcommit='git commit -m'
 # some more ls aliases
-alias ll='ls -l'
+alias ll='ls -lh'
 alias la='ls -A -lh'
 # Remove Directory
 alias rmd='rm -rf'
