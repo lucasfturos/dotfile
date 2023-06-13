@@ -17,7 +17,7 @@ alias gitrenamerepo='git remote set-url origin'
 alias gitcommit='git commit -m'
 # some more ls aliases
 alias ll='ls -l'
-alias la='ls -A -l'
+alias la='ls -A -lh'
 # Remove Directory
 alias rmd='rm -rf'
 # Remove Directory as root
@@ -29,3 +29,5 @@ alias cat='batcat'
 alias test_token='f(){ curl -Lsd "challenge_id=desafio-0"$@"&username=lucasfturos&token=$(cat .valid)" "https://osprogramadores.com/v/verify-token/"; unset -f f; };f'
 # zig
 alias zig='${dir_programacao}/ProjetosZig/zig/zig'
+# Weather
+alias weather='curl wttr.in/Itapema'
