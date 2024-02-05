@@ -29,5 +29,3 @@ alias cat='batcat'
 alias test_token='f(){ curl -Lsd "challenge_id=desafio-0"$@"&username=lucasfturos&token=$(cat .valid)" "https://osprogramadores.com/v/verify-token/"; unset -f f; };f'
 # zig
 alias zig='${dir_programacao}/ProjetosZig/zig/zig'
-# Weather
-alias weather='curl wttr.in/Itapema'
