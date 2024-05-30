@@ -29,3 +29,4 @@ alias cat='batcat'
 alias test_token='f(){ curl -Lsd "challenge_id=desafio-0"$@"&username=lucasfturos&token=$(cat .valid)" "https://osprogramadores.com/v/verify-token/"; unset -f f; };f'
 # zig
 alias zig='${dir_programacao}/ProjetosZig/zig/zig'
+alias video_to_gif='function _video_to_gif(){ ffmpeg -i "$1" -vf "fps=10,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" "$2"; }; _video_to_gif'
