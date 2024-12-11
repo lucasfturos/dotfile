@@ -26,11 +26,6 @@ require'lspconfig'.clangd.setup{
     	semanticHighlighting = true,
     }
 }
-require'lspconfig'.zls.setup{
-  cmd = { "zls" },
-  filetype = { "zig", "zir" },
-  single_file_support =true, 
-}
 
 require'lspconfig'.eslint.setup{
   settings = {

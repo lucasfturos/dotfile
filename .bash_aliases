@@ -1,4 +1,4 @@
-dir_programacao='/home/LucasTuros/Documentos/Programacao/'
+dir_programacao='/home/lucasfturos/Documentos/Programacao/'
 # alias clang-format all c and cpp source
 alias formatclang='clang-format -style=llvm - *.cpp *.hpp *.c *.h'
 # alias commands vim
@@ -11,6 +11,7 @@ alias projetopy='cd ${dir_programacao}ProjetosPython'
 alias projetoweb='cd ${dir_programacao}/ProjetosWEB'
 alias projetogithub='cd ${dir_programacao}/Github'
 alias projetozig='cd ${dir_programacao}/ProjetosZig'
+alias projetorust='cd ${dir_programacao}/ProjetosRust'
 # alias command git
 alias gitlogs='git log --graph --decorate --all --oneline | head -10'
 alias gitrenamerepo='git remote set-url origin'
@@ -28,5 +29,30 @@ alias cpd='cp -r'
 alias cat='batcat'
 alias test_token='f(){ curl -Lsd "challenge_id=desafio-0"$@"&username=lucasfturos&token=$(cat .valid)" "https://osprogramadores.com/v/verify-token/"; unset -f f; };f'
 # zig
-alias zig='${dir_programacao}/ProjetosZig/zig/zig'
-alias video_to_gif='function _video_to_gif(){ ffmpeg -i "$1" -vf "fps=10,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" "$2"; }; _video_to_gif'
+alias zig='~/.local/bin/zig/zig'
+# ffmpeg
+alias video_to_gif='
+function _video_to_gif() { 
+    ffmpeg -i "$1" -vf "fps=60,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" "$2";
+};
+_video_to_gif'
+
+count_lines() {
+    local extensions=(${1//,/ })
+    shift
+    local folders=("$@")
+
+    local find_expr=""
+    for ext in "${extensions[@]}"; do
+        if [[ -z "$find_expr" ]]; then
+            find_expr="-name '*.$ext'"
+        else
+            find_expr="$find_expr -o -name '*.$ext'"
+        fi
+    done
+
+    local full_find_expr="find ${folders[@]} \( $find_expr \) -print"
+
+    eval "$full_find_expr" | xargs wc -l
+}
+
